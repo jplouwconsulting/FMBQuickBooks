@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/25/2018 10:41:22 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="PRODIIS"
+  DTS:CreatorName="PRODIIS\Administrator"
+  DTS:DTSID="{CAE86491-1EFC-4F6F-9E84-58FE45EA7C0A}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3002.107"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{83A04FCA-E211-421F-9E63-D07A0EC68E14}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[prodsql01.FMBDataHub.Juan]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3D7E0B6B-4174-4F7A-B31C-C6CFC4FEC940}"
+      DTS:ObjectName="prodsql01.FMBDataHub.Juan">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=prodsql01;User ID=Juan;Initial Catalog=FMBDataHub;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAtAJVcBjawEC+dhxsrs51GwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABaF+jkegGJk30KSglRQZ64L5RT4D4BE7IyAPcivfTS4QAAAAAOgAAAAAIAACAAAACvflu88aLTXVq9itkJrAMz18ne8msamAigDXOW2n9HnyAAAADOuOcwFiK+W+dMtdf076f6oEX94rc1Y7G/30bu1HacfEAAAACCZcuswvSh+QKO+uWG+Qs6Vuq7sr3VTHPEUWjf902FFlgfdeeOOj9CQXLSVoWuFbyrYsJll+9OUPrjQXz73vta</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Foreach Loop Container"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{149CC7AC-97BA-4DC3-B2BB-7A8C407D76C4}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Foreach Loop Container">
+      <DTS:Variables />
+      <DTS:Executables />
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Match data between QuickBooks and Patient"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Process data between patient table and QB control table"
+      DTS:DTSID="{A55DED70-2D04-43EB-9282-D72FA6963A65}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Match data between QuickBooks and Patient"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{3D7E0B6B-4174-4F7A-B31C-C6CFC4FEC940}"
+          SQLTask:SqlStatementSource="EXEC [dbo].[spPatientDatatoTransfertoQB]"
+          SQLTask:ResultType="ResultSetType_Rowset" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{06C3FF65-6415-4303-8B02-9C70BE24E122}"
+      DTS:From="Package\Match data between QuickBooks and Patient"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Foreach Loop Container" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="214,50"
+          Size="214,93"
+          Id="Package\Foreach Loop Container"
+          TopLeft="64,222" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Match data between QuickBooks and Patient"
+          TopLeft="75.5,107.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="157,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="14,72.5"
+              Start="0,0"
+              End="14,65">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.25"
+                    Point2="0,36.25"
+                    Point3="4,36.25" />
+                  <mssgle:LineSegment
+                    End="10,36.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10,36.25"
+                    Point2="14,36.25"
+                    Point3="14,40.25" />
+                  <mssgle:LineSegment
+                    End="14,65" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
