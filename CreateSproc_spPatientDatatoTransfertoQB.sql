@@ -1,4 +1,4 @@
-USE [FMBDataHub]
+USE [FMBQuickBooks]
 GO
 
 /****** Object:  StoredProcedure [dbo].[spPatientDatatoTransfertoQB]    Script Date: 8/28/2018 10:36:47 AM ******/
