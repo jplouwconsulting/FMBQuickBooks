@@ -9,11 +9,11 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 -- =============================================
--- Author:		<Author,,Name>
--- Create date: <Create Date,,>
--- Description:	<Description,,>
+-- Author:		Juan Louw
+-- Create date: 9 May 2018
+-- Description:	Used to check FMB table compared with data in QuickBooks via the control table
 -- =============================================
-CREATE PROCEDURE [dbo].[spPatientQuickBooksCompare]
+ALTER PROCEDURE [dbo].[spPatientQuickBooksCompare]
 	-- Add the parameters for the stored procedure here
 
 AS
@@ -106,9 +106,9 @@ BEGIN
 	select #t.QBID,
 	'{
     "BillAddr": {
-        "Line1": "123 Main Street",
-        "City": "Mountain View",
-        "Country": "USA",
+        "Line1": "'+#t.Line1 +'",
+        "City": "'+#t.[City]+'",
+        "Country": "'+#t.[Country]+'",
         "CountrySubDivisionCode": "CA",
         "PostalCode": "94042"
     },
