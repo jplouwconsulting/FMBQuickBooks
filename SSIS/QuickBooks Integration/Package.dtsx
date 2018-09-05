@@ -11,26 +11,11 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{7C3B8D75-4A46-436C-A96E-0EBEB7D37935}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{FF75CFCE-024A-4557-B2BD-E75BD8FE4F98}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[prodsql01.FMBDataHub.Juan]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{3D7E0B6B-4174-4F7A-B31C-C6CFC4FEC940}"
-      DTS:ObjectName="prodsql01.FMBDataHub.Juan">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=prodsql01;User ID=Juan;Initial Catalog=FMBDataHub;Provider=SQLNCLI11.1;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAtAJVcBjawEC+dhxsrs51GwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADzdecEWvJGhKsDa2t6i5ZVuDerUDtvqkyeMOaC95SeNQAAAAAOgAAAAAIAACAAAABl5qCS42k1mcLSvbXUpyDRj+9uxTzZOxc2WNw2uWbZNiAAAAAmp6/8TGVbhkcV3ShE+woTY73eKLp1elGrM9CibdLhzUAAAAC/N/l1TfWcCP54pvOsP4OdxtpyiIXjZCT4FT3mJQ//Dz6EiDtzz/taqiSS4OKdVkDc0kkjnpmR+Y4FrwhbtE24</DTS:Password>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[PRODSQL01.FMBQuickBooks.juan]"
       DTS:CreationName="OLEDB"
@@ -42,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAtAJVcBjawEC+dhxsrs51GwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADfbu1DA8osMAQGXRsz7Bx9Bfk+ANfz09kerbyDbySSOwAAAAAOgAAAAAIAACAAAABiXVByOTx2kCY3cO/zAZcH2y3G36C31frq1vPzYIJB+SAAAAAVknCUlQCAjbzurSA1sqjH6e9J2Vg8J51p1uwHotCOPEAAAACEbwCIZD+INCxgC0Rm/Cin8QgokXg0j6brIcjd25h6WxRi2eKbgG9+z5Gf+oXPKyNvg6vWqC6eaSGjlA/xEA8r</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAtAJVcBjawEC+dhxsrs51GwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADnaFh35JRHHj3+etxqwGAxn7yAVGwCXTbMPCH0xqBp7QAAAAAOgAAAAAIAACAAAAD4D/pitqJ2BO8+9vZgqBCBlXinPub7nwjVQDXMr8Y7fiAAAABQ5uHhbxxl0anOL5lm1a3FNZNfl1qpdOErKeejxXsvh0AAAAApaxZRGJx1tSXjQfPYDyJwSOFzUQHqSiuh2ewAuS4VKsFtFyFC70SS57HGysjFSA78qFOlyj9jvzDK/wnSQ/tg</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -75,7 +60,50 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Foreach Loop Container">
       <DTS:Variables />
-      <DTS:Executables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Create Customer in QuickBooks"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{37998D69-A289-40F4-AE50-9461BC647C68}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Create Customer in QuickBooks"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{294F1499-EEA4-4BE0-9BBB-DF5027E0551A}" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Foreach Loop Container\Update FMB Control Table with QuickBooks ID"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{A46071CB-5921-46A1-AFAD-18C9922AD631}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Update FMB Control Table with QuickBooks ID"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{294F1499-EEA4-4BE0-9BBB-DF5027E0551A}" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{CFD75666-9CC5-4349-BE22-609572D3EC84}"
+          DTS:From="Package\Foreach Loop Container\Create Customer in QuickBooks"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Foreach Loop Container\Update FMB Control Table with QuickBooks ID" />
+      </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\QyuickBooks v FMB"
@@ -126,13 +154,55 @@
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="227,42"
+          Id="Package\Foreach Loop Container\Create Customer in QuickBooks"
+          TopLeft="33,32" />
+        <NodeLayout
+          Size="297,42"
+          Id="Package\Foreach Loop Container\Update FMB Control Table with QuickBooks ID"
+          TopLeft="36,121" />
+        <EdgeLayout
+          Id="Package\Foreach Loop Container.PrecedenceConstraints[Constraint]"
+          TopLeft="146.5,74">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="38,47"
+              Start="0,0"
+              End="38,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5"
+                    Point2="0,23.5"
+                    Point3="4,23.5" />
+                  <mssgle:LineSegment
+                    End="34,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="34,23.5"
+                    Point2="38,23.5"
+                    Point3="38,27.5" />
+                  <mssgle:LineSegment
+                    End="38,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="214,50"
-          Size="214,93"
+          PanelSize="444,220"
+          Size="444,263"
           Id="Package\Foreach Loop Container"
-          TopLeft="50,312" />
+          TopLeft="50,319" />
         <NodeLayout
           Size="163,42"
           Id="Package\FMB v Control Table"
@@ -165,18 +235,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="155.25,249">
+          TopLeft="157,249">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,63"
+              EndConnector="115,70"
               Start="0,0"
-              End="0,55.5">
+              End="115,62.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,55.5" />
+                    End="0,31" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31"
+                    Point2="0,35"
+                    Point3="4,35" />
+                  <mssgle:LineSegment
+                    End="111,35" />
+                  <mssgle:CubicBezierSegment
+                    Point1="111,35"
+                    Point2="115,35"
+                    Point3="115,39" />
+                  <mssgle:LineSegment
+                    End="115,62.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

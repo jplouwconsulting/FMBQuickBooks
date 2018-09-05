@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">PRODIIS</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAtAJVcBjawEC+dhxsrs51GwAAAAACAAAAAAAQZgAAAAEAACAAAAC/jBP/HszYasORYlIClu/B+lZrXOFuNS4w69jhdeBiSAAAAAAOgAAAAAIAACAAAACfF/dFBom9RKdsHRFo3gZE8hZ70qgUuTwwNscL+fsXu5AAAAChPjJjqoF4l8FSzfj6ywPKd/oZshAVXXlXwhQS8ZjJpKom+VHJqRUUYhNmnACwWyzDy48MbSriiua510Q9yc2EeKCu3QPPO2RSFmASiJfjJubtEcuvXcF9tvaMw1FYrY1Br+2jndG92n6QtzLHKTfieQoRD08/w/QHcrQ0w12soitrwteNqTePwau4XL8fw1FAAAAAYYsa9fjI5PDenm9fsIojGxP88uME9A220Fb2EwUXIzbH7c8lj+DpSGVcgHJQ9T1na/CPjKei1lCu6M+udqLWtg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAtAJVcBjawEC+dhxsrs51GwAAAAACAAAAAAAQZgAAAAEAACAAAACwjffyVLiQM2e5rob/D4WgAh6IiKXcdI7Xl59V2PALiAAAAAAOgAAAAAIAACAAAABu+Zj0nb+Qf01ef5k2FH4KTZjVppe2BxJbl2wVBiIp05AAAABViRNzOFT4IvVQ1R2H5aVZCEu9JDP6mpEf4zLQOzvGgAHjaE7JCSrWVNSzj5i8KFdG6L85XIUh5VLZaQGJNH3KAtXzZy+f3LNtnvL0gWZCqOCSa9Hyp7VVi4KdzZaxDZJo2rsgAKdN7w2nty2PrCqNxTus4d4bSy6IKfUHZBxlDw+o+2u1z+qlom+cfkSkpP9AAAAA1Qp+RFwScaSmaGrjZE9abAT4FISfvVDloIDhGXWxfLTBrZGdZ7WVPeqJZTsoZNa1L+VSPPeyMkDq/miR+hguQg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,17 +42,17 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">5</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{83A04FCA-E211-421F-9E63-D07A0EC68E14}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{FF75CFCE-024A-4557-B2BD-E75BD8FE4F98}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
               </SSIS:Properties>
               <SSIS:Parameters>
-                <SSIS:Parameter SSIS:Name="CM.prodsql01.FMBDataHub.Juan.ConnectionString">
+                <SSIS:Parameter SSIS:Name="CM.PRODSQL01.FMBQuickBooks.juan.ConnectionString">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -63,11 +63,11 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=prodsql01;User ID=Juan;Initial Catalog=FMBDataHub;Provider=SQLNCLI11.1;Auto Translate=False;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=PRODSQL01;User ID=juan;Initial Catalog=FMBQuickBooks;Provider=SQLNCLI11.1;Auto Translate=False;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.prodsql01.FMBDataHub.Juan.InitialCatalog">
+                <SSIS:Parameter SSIS:Name="CM.PRODSQL01.FMBQuickBooks.juan.InitialCatalog">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -78,11 +78,11 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">FMBDataHub</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">FMBQuickBooks</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.prodsql01.FMBDataHub.Juan.Password">
+                <SSIS:Parameter SSIS:Name="CM.PRODSQL01.FMBQuickBooks.juan.Password">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -96,7 +96,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.prodsql01.FMBDataHub.Juan.RetainSameConnection">
+                <SSIS:Parameter SSIS:Name="CM.PRODSQL01.FMBQuickBooks.juan.RetainSameConnection">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -111,7 +111,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.prodsql01.FMBDataHub.Juan.ServerName">
+                <SSIS:Parameter SSIS:Name="CM.PRODSQL01.FMBQuickBooks.juan.ServerName">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -122,11 +122,11 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">prodsql01</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">PRODSQL01</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.prodsql01.FMBDataHub.Juan.UserName">
+                <SSIS:Parameter SSIS:Name="CM.PRODSQL01.FMBQuickBooks.juan.UserName">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -137,7 +137,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Juan</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">juan</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
