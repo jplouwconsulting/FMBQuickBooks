@@ -1,4 +1,4 @@
-USE [FMBDataHub]
+USE [FMBQuickBooks]
 GO
 
 /****** Object:  StoredProcedure [dbo].[usp_QuickBooks_v3_Auth_Header]    Script Date: 9/5/2018 3:50:41 PM ******/
