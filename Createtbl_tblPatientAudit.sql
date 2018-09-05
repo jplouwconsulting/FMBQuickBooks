@@ -1,4 +1,4 @@
-USE [FMBDataHub]
+USE [FMBQuickBooks]
 GO
 
 /****** Object:  Table [dbo].[tblPatientAudit]    Script Date: 8/28/2018 10:35:53 AM ******/
